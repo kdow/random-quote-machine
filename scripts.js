@@ -10,7 +10,15 @@ function getQuote() {
     });
 };
 
+function tweetQuote() {
+  let quote = $('#text').text();
+  let author = $('#author').text();
+  let tweetURL = 'https://twitter.com/intent/tweet?text='+encodeURIComponent(quote+'-'+author);
+  window.open(tweetURL, '_blank');
+};
+
 $(document).ready(function(){
   getQuote();
   $('#new-quote').on('click', getQuote);
+  $('#tweet-quote').on('click', tweetQuote);
 });
