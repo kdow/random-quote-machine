@@ -13,7 +13,7 @@ body {
 
 #box-wrapper{
   background-color: gray;
-  width: 80%;
+  width: 65%;
   display: flex;
   padding: 50px;
   border-radius: 10px;
@@ -67,4 +67,16 @@ body {
 
 a {
   text-decoration: none;
+}
+
+@media only screen and (min-width: 750px) {
+  #box-wrapper{
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #box-wrapper{
+    width: 35%;
+  }
 }
